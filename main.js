@@ -29,14 +29,25 @@ function divide(a,b) {      //division
     
 }
 
-function operate(firstnumber,operator,secondnumber) {
 
-    
-}
 
 
 let firstnumber;
 let operator;
 let secondnumber;
+
+
+let populates=document.getElementById('parentButton')
+
+big=populates.addEventListener('click' , buttonclicks) ; 
+
+function buttonclicks(e) {
+    
+     display=document.querySelector('.display p')
+     display.innerHTML=e.target.value;
+     
+}
+console.log(big)
+
 
 
