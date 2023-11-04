@@ -29,7 +29,12 @@ function divide(a,b) {      //division
     
 }
 
+function operate(firstnumber,operator,secondnumber) {
+    
+}
 
+
+letssum=document.querySelector('.button15').addEventListener('click',add)
 
 
 let firstnumber;
@@ -44,7 +49,11 @@ big=populates.addEventListener('click' , buttonclicks) ;
 function buttonclicks(e) {
     
      display=document.querySelector('.display p')
-     display.innerHTML=e.target.value;
+     if (e.target.matches('button')) {
+        display.innerHTML+=e.target.value;
+     }
+     let displayvalue=document.querySelector('.display p').innerHTML
+     console.log(displayvalue)
      
 }
 console.log(big)
