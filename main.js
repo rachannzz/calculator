@@ -1,62 +1,59 @@
-function add(a,b) {     //addition
-   let sum=0;       
-
-   return sum=a+b;  
-
-}
-
-
-function subtract(a,b) {    //subtraction
-    let sub=0;
-
-    return sub=a-b;
-    
-}
-
-function multiply(a,b) {    //multiplication
-    
-    let mul=0;
-
-    return mul=a*b;
-
-}
-
-function divide(a,b) {      //division
-
-    let div=0;
-
-    return div=a/b;
-    
-}
-
-function operate(firstnumber,operator,secondnumber) {
-    
-}
-
-
-letssum=document.querySelector('.button15').addEventListener('click',add)
-
-
 let firstnumber;
-let operator;
 let secondnumber;
+let operator;
+let step=0;
+let result=0;
 
 
-let populates=document.getElementById('parentButton')
+let display=document.getElementById('display')
+let numArry=[];
+let secnumarray=[];
 
-big=populates.addEventListener('click' , buttonclicks) ; 
 
-function buttonclicks(e) {
-    
-     display=document.querySelector('.display p')
-     if (e.target.matches('button')) {
-        display.innerHTML+=e.target.value;
-     }
-     let displayvalue=document.querySelector('.display p').innerHTML
-     console.log(displayvalue)
-     
+function getNumber(num) {
+    if (step==0|| step===1) {   
+        numArry.push(num)
+        step=1;
+        firstnumber=Number(numArry.join(''))//makes it to one string 
+        display.value=firstnumber;
+    }
+    else if (step===2) {
+        secnumarray.push(num)
+        secondnumber=Number(secnumarray.join(''));
+        display.value=secondnumber;
+    }
 }
-console.log(big)
+
+function getOperator(op) {
+    step=2;
+    operator=op;
+}
+
+function clearDisplay(params) {
+    display.value=0;
+    firstnumber=null;
+    secondnumber=null;
+    step=0;
+    operator=null;
+    result=0;
+    numArry=[];
+    secnumarray=[];
+}
 
 
-
+function calculateResult() {
+	console.log('first number', firstnumber, 'second number', secondnumber)
+	if (operator === '+') {
+		result = firstnumber + secondnumber
+		display.value = result
+	} else if (operator === '-') {
+		result = firstnumber - secondnumber
+		display.value = result
+	} else if (operator === '*') {
+		result = firstnumber * secondnumber
+		display.value = result
+	} else if (operator === '/') {
+		result = firstnumber / secondnumber
+		display.value = result
+	}
+}

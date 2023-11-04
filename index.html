@@ -1,66 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>calculator</title>
-    
-</head>
-<body>
-    
-    <div class="box">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="style.css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<section class="header">
+				<h1>My Calculator</h1>
+				<input id="display" type="text" />
+			</section>
 
-            <div class="display"><p></p></div>
-            
-            <div id= 'parentButton' class="buttons">
-                <button class="button buttonac" value="AC">AC</button>
-          
-          
-                <button class="button button1" value="1">1</button>
-            
-          
-                <button class="button button2" value="2">2</button>
-            
-            
-                <button class="button button3" value="3">3</button>
-           
-            
-                <button class="button button4" value="4">4</button>
-            
-            
-                <button class="button button5" value="5">5</button>
-           
-                <button class="button button6" value="6">6</button>
-            
-                <button class="button button7" value="7">7</button>
-           
-                <button class="button button8" value="8">8</button>
-            
-                <button class="button button9" value="9">9</button>
-            
-                <button class="button button0" value="0">0</button>
-            
-                <button class="button button11" value=".">.</button>
-           
-                <button class="button button12" value="/"> /</button>
-            
-                <button class="button button13" value="*">*</button>
-            
-                <button class="button button14" value="-">-</button>
-           
-                <button class="button button15" value="+">+</button>
-           
-                <button class="button button16" value="=">=</button>
-            </div>
-        
-      
-            
+			<section class="buttons">
+				<button onclick="getNumber(1)">1</button>
+				<button onclick="getNumber(2)">2</button>
+				<button onclick="getNumber(3)">3</button>
+				<button onclick="getOperator('+')">+</button>
 
-            
-    </div>
-        
-   
-</body>
-<script src="main.js"></script>
+				<button onclick="getNumber(4)">4</button>
+				<button onclick="getNumber(5)">5</button>
+				<button onclick="getNumber(6)">6</button>
+				<button onclick="getOperator('-')">-</button>
+
+				<button onclick="getNumber(7)">7</button>
+				<button onclick="getNumber(8)">8</button>
+				<button onclick="getNumber(9)">9</button>
+				<button onclick="getOperator('*')">*</button>
+
+				<button onclick="clearDisplay()">ce</button>
+				<button onclick="getNumber(0)">0</button>
+
+				<button onclick="calculateResult()">=</button>
+				<button onclick="getOperator('/')">/</button>
+			</section>
+			<script src="main.js"></script>
+		</div>
+	</body>
 </html>

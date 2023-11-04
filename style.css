@@ -1,60 +1,51 @@
-
-
-.html{
-    box-sizing: border-box;
-  }
-
-body{
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
+body {
+	background-color: #0e0e0e;
+	font-family: 'Courier New', Courier, monospace;
 }
 
-.box{
-    display: flex;
-    background-color: red;
-    flex-direction: column;
-    justify-content: flex-start;
-    border: 4px solid darkblue;
-    width: 500px;
-    height: 500px;  
+.container {
+	margin: 10vh auto;
+	width: 500px;
+	padding: 2rem;
+	text-align: center;
+	border-radius: 10px;
+	background-color: #272727;
 }
 
- .display{
-    display: flex;
-    background-color: white;
-    justify-content: flex-end;
-    align-items: stretch; 
-    border: 4px solid darkblue;
-    margin: 5px;
-   height: 100px;
+.header {
+	margin: 2rem;
+	color: #666;
 }
 
-.display p{
-    display: flex;
-    align-items: flex-end;
-    padding-right: 10px;
-    font-size: 50px;
-    height:50px;
-    overflow: hidden;
+input {
+	width: 370px;
+	padding: 0.5rem 2rem;
+	font-size: 3rem;
+	border-radius: 10px;
+	text-align: right;
+
+	background-color: #272727;
+	color: #666;
 }
 
-.buttons{
-    border:4px solid green;
-    display: flex;
-    flex-wrap: wrap;
-}  
+.buttons {
+	margin: auto;
+	width: 450px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
-.button {
-    background-color: #4CAF50; 
-    border: 3px solid blue;
-    color: white;
-    padding: 30px;
-    text-align: center;
-    font-size: 15 px;
-    margin: 7px;
-    cursor: pointer;
-    border-radius: 12px;
-    flex: 1 1 0;
-  }
-  
+button {
+	padding: 40px;
+	font-size: 20px;
+	margin: 0.5rem;
+	max-width: 100px;
+	max-height: 100px;
+	text-align: center;
+	border-radius: 10%;
+
+	font-weight: 900;
+	background-color: #272727;
+	color: #666;
+}
